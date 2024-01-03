@@ -1,11 +1,11 @@
 # Laporan Proyek Machine Learning
-### Nama :
-### Nim :
-### Kelas :
+### Nama : Lia Nurmalasari
+### Nim : 211351073
+### Kelas : Malam B
 
 ## Domain Proyek
 
-Pada bagian ini, kamu perlu menuliskan latar belakang yang relevan dengan proyek yang diangkat.
+analisa keranjang barang menjadi poin penting dalam peningkatan strategi penjualan menjadi alasan penting mengapa proyek ini diangkat. dengan adanya analisa terkait pembelian barang, maka penjual dapat mengetahui kebiasaan pembelian pelanggan guna meningkatkan strategi penjualan kedepannya
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Jelaskan mengapa dan bagaimana masalah tersebut harus diselesaikan
