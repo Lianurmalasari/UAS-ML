@@ -61,8 +61,8 @@ data = get_data(month, day, item)
 
 if not data.empty:
     # Apply association analysis
-    item_count = df.groupby(["nama.pembeli", "article"])["article"].count().reset_index(name="Count")
-    item_count_pivot = item_count.pivot_table(index='nama.pembeli', columns='article', values='Count', aggfunc='sum').fillna(0)
+    item_count = df.groupby(["ticket_number", "article"])["article"].count().reset_index(name="Count")
+    item_count_pivot = item_count.pivot_table(index='ticket_number', columns='article', values='Count', aggfunc='sum').fillna(0)
     item_count_pivot = item_count_pivot.applymap(encode)
 
     # Apriori Algorithm
