@@ -27,11 +27,11 @@ st.title("Market Basket Analysis with Apriori")
 st.sidebar.header("Masukan Kriteria")
 item = st.sidebar.selectbox("Pilih Item", df['article'].unique())
 month = st.sidebar.selectbox("Bulan", df['month'].unique())
-day = st.sidebar.selectbox("Hari", df['day'].unique())
+day = st.sidebar.selectbox("Hari", df['weekday'].unique())
 
 # Function to get filtered data based on user input
 def get_data(month, day, item):
-    filtered = df.loc[(df["month"] == month) & (df["day"] == day) & (df["article"] == item)]
+    filtered = df.loc[(df["month"] == month) & (df["weekday"] == day) & (df["article"] == item)]
     return filtered
 
 # Function to encode the data
