@@ -270,4 +270,4 @@ plt.show()
 ## Deployment
 
 Model yang sudah di buat di deploy menggunakan streamlit: 
-Link Aplikasi: [-](https://-/).
+Link Aplikasi: [Market Basket Analysis With Apriori](https://french-bakery-lia.streamlit.app/).
