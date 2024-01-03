@@ -7,7 +7,7 @@ df = pd.read_csv("Bakery sales.csv")
 
 # Convert the 'tanggal' column to datetime
 df['Datetime'] = pd.to_datetime(df['date'] + ' ' + df['time'], format='%Y-%m-%d %H:%M')
-
+df = df.drop(['date','time'],axis=1)
 df['date'] = df['Datetime'].dt.date
 
 df['month'] = df['Datetime'].dt.month
@@ -63,6 +63,7 @@ if not data.empty:
     # Apply association analysis
     item_count = df.groupby(["ticket_number", "article"])["article"].count().reset_index(name="Count")
     item_count_pivot = item_count.pivot_table(index='ticket_number', columns='article', values='Count', aggfunc='sum').fillna(0)
+    item_count_pivot = item_count_pivot.astype("int32")
     item_count_pivot = item_count_pivot.applymap(encode)
 
     # Apriori Algorithm
